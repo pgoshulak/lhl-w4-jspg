@@ -1,0 +1,23 @@
+{
+  "name": "js-pg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "pg": "^7.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgoshulak/lhl-w4-jspg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pgoshulak/lhl-w4-jspg/issues"
+  },
+  "homepage": "https://github.com/pgoshulak/lhl-w4-jspg#readme"
+}
