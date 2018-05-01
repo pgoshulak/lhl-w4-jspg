@@ -1,6 +1,12 @@
 module.exports = function(db) {
   function getPerson(name) {
-    return db.query('SELECT $1::int AS number', ['2'])
+    let queryString = `
+    SELECT * 
+    FROM famous_people 
+    WHERE first_name LIKE '%'||$1::text||'%'
+      OR last_name LIKE '%'||$1::text||'%'
+    `
+    return db.query(queryString, [name])
   }
   return {
     getPerson
