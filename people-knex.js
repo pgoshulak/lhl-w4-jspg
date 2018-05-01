@@ -1,12 +1,8 @@
-module.exports = function(db) {
+module.exports = function(knex) {
   function getPerson(name) {
-    let queryString = `
-    SELECT * 
-    FROM famous_people 
-    WHERE first_name LIKE '%'||$1::text||'%'
-      OR last_name LIKE '%'||$1::text||'%'
-    `
-    return db.query(queryString, [name])
+    return knex('famous_people')
+      .where('first_name', 'like', `%${name}%`)
+      .orWhere('last_name', 'like', `%${name}%`)
   }
   return {
     getPerson
